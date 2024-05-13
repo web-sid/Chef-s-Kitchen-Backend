@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // placing user order
 const placeOrder = catchAsync(async (req, res) => {
-  const frontendUrl = "http://localhost:5173";
+  const frontendUrl = "https://chefs-kitchen-restaurant.netlify.app/";
   const { userId, items, amount, address } = req.body;
 
   const newOrder = await Order.create({
